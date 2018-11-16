@@ -45,3 +45,5 @@ EXPOSE 80
 CMD ["/sbin/init", "3"]
 
 RUN apt-get -y install php7.3-xdebug
+COPY asset/xdebug.ini /etc/php/7.3/mods-available/
+EXPOSE 9000
