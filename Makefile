@@ -1,5 +1,5 @@
 NAME=php_xdebug
-VERSION=latest
+VERSION=php56
 DOCKER_RUN_OPTIONS= \
 	--privileged \
 	--net=docker-lan \

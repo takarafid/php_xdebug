@@ -13,8 +13,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update
 RUN apt-get -y install net-tools git make apache2
 RUN apt-get -y install vim curl chkconfig gcc libpcre3-dev unzip locales
-RUN apt-get -y install mysql-server php7.3 php-pear php7.3-mysql php7.3-curl php7.3-mbstring php7.3-zip \
-    php7.3-cli php7.3-common php7.3-json php7.3-opcache php7.3-readline php7.3-xml
+RUN apt-get -y install mysql-server php5.6 php-pear php5.6-mysql php5.6-curl php5.6-mbstring php5.6-zip \
+    php5.6-cli php5.6-common php5.6-json php5.6-opcache php5.6-readline php5.6-xml
 RUN apt-get -y install imagemagick
 ENV DEBIAN_FRONTEND dialog
 
@@ -44,6 +44,7 @@ EXPOSE 80
 
 CMD ["/sbin/init", "3"]
 
-RUN apt-get -y install php7.3-xdebug
-COPY asset/xdebug.ini /etc/php/7.3/mods-available/
+RUN apt-get -y install php5.6-xdebug
+COPY asset/xdebug.ini /etc/php/5.6/mods-available/
 EXPOSE 9000
+EXPOSE 15000
